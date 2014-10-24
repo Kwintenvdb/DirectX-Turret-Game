@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Materials\DiffuseMaterial.cpp" />
+    <ClCompile Include="Materials\SpikeyMaterial.cpp" />
+    <ClCompile Include="Materials\ColorMaterial.cpp" />
+    <ClCompile Include="Materials\UberMaterial.cpp" />
+    <ClCompile Include="Materials\SkinnedDiffuseMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Project\MainScene.cpp" />
+    <ClCompile Include="CourseObjects\Project\Projectile.cpp" />
+    <ClCompile Include="CourseObjects\Project\Player.cpp" />
+    <ClCompile Include="CourseObjects\Project\Enemy.cpp" />
+    <ClCompile Include="CourseObjects\Project\Fire.cpp" />
+    <ClCompile Include="CourseObjects\Project\Turret.cpp" />
+    <ClCompile Include="CourseObjects\Project\LevelPiece.cpp" />
+    <ClCompile Include="CourseObjects\Project\Pickup.cpp" />
+    <ClCompile Include="CourseObjects\Project\SpawnPoint.cpp" />
+    <ClCompile Include="Materials\FurMaterial.cpp" />
+    <ClCompile Include="CourseObjects\FurTest\FurTestScene.cpp" />
+    <ClCompile Include="CourseObjects\Project\Terrain.cpp" />
+    <ClCompile Include="Materials\BlurMaterial.cpp" />
+    <ClCompile Include="Materials\GrayMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Project\ResourceBar.cpp" />
+    <ClCompile Include="Materials\SkyBoxMaterial.cpp" />
+    <ClCompile Include="CourseObjects\Project\Laser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Materials\DiffuseMaterial.h" />
+    <ClInclude Include="Materials\SpikeyMaterial.h" />
+    <ClInclude Include="Materials\ColorMaterial.h" />
+    <ClInclude Include="Materials\UberMaterial.h" />
+    <ClInclude Include="Materials\SkinnedDiffuseMaterial.h" />
+    <ClInclude Include="CourseObjects\Project\MainScene.h" />
+    <ClInclude Include="CourseObjects\Project\Projectile.h" />
+    <ClInclude Include="CourseObjects\Project\Player.h" />
+    <ClInclude Include="CourseObjects\Project\Enemy.h" />
+    <ClInclude Include="CourseObjects\Project\Fire.h" />
+    <ClInclude Include="CourseObjects\Project\Turret.h" />
+    <ClInclude Include="CourseObjects\Project\LevelPiece.h" />
+    <ClInclude Include="CourseObjects\Project\Pickup.h" />
+    <ClInclude Include="CourseObjects\Project\SpawnPoint.h" />
+    <ClInclude Include="Materials\FurMaterial.h" />
+    <ClInclude Include="CourseObjects\FurTest\FurTestScene.h" />
+    <ClInclude Include="CourseObjects\Project\Terrain.h" />
+    <ClInclude Include="Materials\BlurMaterial.h" />
+    <ClInclude Include="Materials\GrayMaterial.h" />
+    <ClInclude Include="CourseObjects\Project\ResourceBar.h" />
+    <ClInclude Include="Materials\SkyBoxMaterial.h" />
+    <ClInclude Include="CourseObjects\Project\Laser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meshes\Bone.ovm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\Smoke.png" />
+    <Image Include="Resources\Textures\fur.png" />
+  </ItemGroup>
+</Project>

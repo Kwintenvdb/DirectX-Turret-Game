@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{634CFE8D-455C-45BF-94F0-BD0AAB13E0E6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>OverlordEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ProjectDir)/Base</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OVERLORDENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)/Base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Components\ParticleEmitterComponent.h" />
+    <ClInclude Include="Graphics\ModelAnimator.h" />
+    <ClInclude Include="Graphics\Particle.h" />
+    <ClInclude Include="Graphics\PostProcessingMaterial.h" />
+    <ClInclude Include="Prefabs\BoneObject.h" />
+    <ClInclude Include="Components\RigidBodyComponent.h" />
+    <ClInclude Include="Base\InputManager.h" />
+    <ClInclude Include="Components\ColliderComponent.h" />
+    <ClInclude Include="Components\CameraComponent.h" />
+    <ClInclude Include="Components\BaseComponent.h" />
+    <ClInclude Include="Base\OverlordGame.h" />
+    <ClInclude Include="Base\stdafx.h" />
+    <ClInclude Include="Components\Components.h" />
+    <ClInclude Include="Components\MeshDrawComponent.h" />
+    <ClInclude Include="Components\MeshIndexedDrawComponent.h" />
+    <ClInclude Include="Content\ContentLoader.h" />
+    <ClInclude Include="Content\ContentManager.h" />
+    <ClInclude Include="Content\SpriteFontLoader.h" />
+    <ClInclude Include="Content\TextureDataLoader.h" />
+    <ClInclude Include="Content\EffectLoader.h" />
+    <ClInclude Include="Content\MeshFilterLoader.h" />
+    <ClInclude Include="Components\ControllerComponent.h" />
+    <ClInclude Include="Content\PxConvexMeshLoader.h" />
+    <ClInclude Include="Content\PxTriangleMeshLoader.h" />
+    <ClInclude Include="Diagnostics\DebugRenderer.h" />
+    <ClInclude Include="Graphics\SpriteFont.h" />
+    <ClInclude Include="Graphics\TextRenderer.h" />
+    <ClInclude Include="Helpers\EffectHelper.h" />
+    <ClInclude Include="Helpers\BinaryReader.h" />
+    <ClInclude Include="Helpers\PhysxHelper.h" />
+    <ClInclude Include="Helpers\VertexHelper.h" />
+    <ClInclude Include="Graphics\MeshFilter.h" />
+    <ClInclude Include="Components\ModelComponent.h" />
+    <ClInclude Include="Graphics\Material.h" />
+    <ClInclude Include="Base\MaterialManager.h" />
+    <ClInclude Include="Helpers\MathHelper.h" />
+    <ClInclude Include="Physx\PhysxProxy.h" />
+    <ClInclude Include="Physx\OverlordSimulationFilterShader.h" />
+    <ClInclude Include="Physx\PhysxErrorCallback.h" />
+    <ClInclude Include="Physx\PhysxAllocator.h" />
+    <ClInclude Include="Physx\PhysxManager.h" />
+    <ClInclude Include="Prefabs\CubePrefab.h" />
+    <ClInclude Include="Diagnostics\Logger.h" />
+    <ClInclude Include="Base\GameTime.h" />
+    <ClInclude Include="Diagnostics\GameSpecs.h" />
+    <ClInclude Include="Base\GeneralStructs.h" />
+    <ClInclude Include="Helpers\Singleton.h" />
+    <ClInclude Include="Prefabs\FixedCamera.h" />
+    <ClInclude Include="Prefabs\FreeCamera.h" />
+    <ClInclude Include="Prefabs\Prefabs.h" />
+    <ClInclude Include="Prefabs\SkyBoxPrefab.h" />
+    <ClInclude Include="Prefabs\SpherePrefab.h" />
+    <ClInclude Include="Prefabs\TorusPrefab.h" />
+    <ClInclude Include="Scenegraph\GameScene.h" />
+    <ClInclude Include="Scenegraph\GameObject.h" />
+    <ClInclude Include="Graphics\RenderTarget.h" />
+    <ClInclude Include="Scenegraph\SceneManager.h" />
+    <ClInclude Include="Components\TransformComponent.h" />
+    <ClInclude Include="Graphics\TextureData.h" />
+    <ClInclude Include="Graphics\SpriteRenderer.h" />
+    <ClInclude Include="Components\SpriteComponent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Base\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Components\ParticleEmitterComponent.cpp" />
+    <ClCompile Include="Graphics\ModelAnimator.cpp" />
+    <ClCompile Include="Graphics\Particle.cpp" />
+    <ClCompile Include="Graphics\PostProcessingMaterial.cpp" />
+    <ClCompile Include="Prefabs\BoneObject.cpp" />
+    <ClCompile Include="Components\RigidBodyComponent.cpp" />
+    <ClCompile Include="Base\InputManager.cpp" />
+    <ClCompile Include="Components\ColliderComponent.cpp" />
+    <ClCompile Include="Components\CameraComponent.cpp" />
+    <ClCompile Include="Components\BaseComponent.cpp" />
+    <ClCompile Include="Base\OverlordGame.cpp" />
+    <ClCompile Include="Components\MeshDrawComponent.cpp" />
+    <ClCompile Include="Components\MeshIndexedDrawComponent.cpp" />
+    <ClCompile Include="Content\ContentManager.cpp" />
+    <ClCompile Include="Content\SpriteFontLoader.cpp" />
+    <ClCompile Include="Content\TextureDataLoader.cpp" />
+    <ClCompile Include="Content\EffectLoader.cpp" />
+    <ClCompile Include="Content\MeshFilterLoader.cpp" />
+    <ClCompile Include="Components\ControllerComponent.cpp" />
+    <ClCompile Include="Content\PxConvexMeshLoader.cpp" />
+    <ClCompile Include="Content\PxTriangleMeshLoader.cpp" />
+    <ClCompile Include="Diagnostics\DebugRenderer.cpp" />
+    <ClCompile Include="Graphics\SpriteFont.cpp" />
+    <ClCompile Include="Graphics\TextRenderer.cpp" />
+    <ClCompile Include="Helpers\EffectHelper.cpp" />
+    <ClCompile Include="Graphics\MeshFilter.cpp" />
+    <ClCompile Include="Helpers\BinaryReader.cpp" />
+    <ClCompile Include="Components\ModelComponent.cpp" />
+    <ClCompile Include="Graphics\Material.cpp" />
+    <ClCompile Include="Helpers\PhysxHelper.cpp" />
+    <ClCompile Include="Helpers\VertexHelper.cpp" />
+    <ClCompile Include="Base\MaterialManager.cpp" />
+    <ClCompile Include="Helpers\MathHelper.cpp" />
+    <ClCompile Include="Physx\PhysxProxy.cpp" />
+    <ClCompile Include="Physx\PhysxErrorCallback.cpp" />
+    <ClCompile Include="Physx\PhysxManager.cpp" />
+    <ClCompile Include="Prefabs\CubePrefab.cpp" />
+    <ClCompile Include="Diagnostics\Logger.cpp" />
+    <ClCompile Include="Base\GameTime.cpp" />
+    <ClCompile Include="Diagnostics\GameSpecs.cpp" />
+    <ClCompile Include="Prefabs\FixedCamera.cpp" />
+    <ClCompile Include="Prefabs\FreeCamera.cpp" />
+    <ClCompile Include="Prefabs\SkyBoxPrefab.cpp" />
+    <ClCompile Include="Prefabs\SpherePrefab.cpp" />
+    <ClCompile Include="Prefabs\TorusPrefab.cpp" />
+    <ClCompile Include="Scenegraph\GameScene.cpp" />
+    <ClCompile Include="Scenegraph\GameObject.cpp" />
+    <ClCompile Include="Graphics\RenderTarget.cpp" />
+    <ClCompile Include="Scenegraph\SceneManager.cpp" />
+    <ClCompile Include="Components\TransformComponent.cpp" />
+    <ClCompile Include="Graphics\TextureData.cpp" />
+    <ClCompile Include="Graphics\SpriteRenderer.cpp" />
+    <ClCompile Include="Components\SpriteComponent.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
